@@ -139,7 +139,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Factory.h" />
+    <ClInclude Include="ICompleteOrder.h" />
+    <ClInclude Include="ICreateOrder.h" />
+    <ClInclude Include="ISimulate.h" />
+    <ClInclude Include="Manager.h" />
+    <ClInclude Include="Package.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Product.h" />
+    <ClInclude Include="Shelf.h" />
+    <ClInclude Include="Shop.h" />
+    <ClInclude Include="Storage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
