@@ -18,5 +18,9 @@ using std::map;
 using std::vector;
 using std::mt19937;
 using std::uniform_int_distribution;
+using std::pair;
 
 mt19937 rand;
+
+
+vector<string> currentSimulationProducts;

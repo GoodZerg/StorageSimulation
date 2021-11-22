@@ -139,7 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Factory.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Product.cpp" />
+    <ClCompile Include="Shelf.cpp" />
+    <ClCompile Include="Shop.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Factory.h" />
@@ -147,6 +151,7 @@
     <ClInclude Include="ICreateOrder.h" />
     <ClInclude Include="ISimulate.h" />
     <ClInclude Include="Manager.h" />
+    <ClInclude Include="Order.h" />
     <ClInclude Include="Package.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Product.h" />

@@ -1,57 +1,100 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Классы">
+      <UniqueIdentifier>{d1948750-782f-43c0-832c-2b78f59066bc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы заголовков">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Классы\Интерфейсы">
+      <UniqueIdentifier>{45927f23-084f-43c8-9c6b-986b99be485a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы">
+    <Filter Include="Классы\Объекты симуляции">
+      <UniqueIdentifier>{e5272d45-5795-4026-a053-fbd9bb612a9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Менеджер склада">
+      <UniqueIdentifier>{31266d59-9a00-4d63-86d7-af6c2f930e96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Фабрика товаров">
+      <UniqueIdentifier>{a34aaecd-54a1-4ec0-9b8d-30eb58fc081e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Склад">
+      <UniqueIdentifier>{a347ce91-56c6-4b84-860c-24b95dbe9bbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Продукты">
+      <UniqueIdentifier>{16597cf3-8c61-46fd-9554-8e609016416a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Заказ">
+      <UniqueIdentifier>{201bbebb-41c7-48df-88ce-b7f83c917634}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Магазин">
+      <UniqueIdentifier>{0276df0e-6b51-4ed9-846e-c363dd47d6f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Симуляция">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Склад\Складская полка">
+      <UniqueIdentifier>{027b981b-84c1-4805-9588-604c7a33727d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Продукты\Оптовая упаковка">
+      <UniqueIdentifier>{9a1a009c-e2d6-4fac-8666-443005181ae5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Продукты\Продукт">
+      <UniqueIdentifier>{a634c021-8283-458b-b8be-90df9fc7a26d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Симуляция</Filter>
+    </ClCompile>
+    <ClCompile Include="Shop.cpp">
+      <Filter>Классы\Объекты симуляции\Магазин</Filter>
+    </ClCompile>
+    <ClCompile Include="Shelf.cpp">
+      <Filter>Классы\Объекты симуляции\Склад\Складская полка</Filter>
+    </ClCompile>
+    <ClCompile Include="Product.cpp">
+      <Filter>Классы\Объекты симуляции\Продукты\Продукт</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory.cpp">
+      <Filter>Классы\Объекты симуляции\Фабрика товаров</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ICompleteOrder.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="ICreateOrder.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="ISimulate.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Package.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Product.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Storage.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Shelf.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Shop.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="pch.h">
+      <Filter>Классы</Filter>
     </ClInclude>
     <ClInclude Include="Factory.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Классы\Объекты симуляции\Фабрика товаров</Filter>
+    </ClInclude>
+    <ClInclude Include="ICompleteOrder.h">
+      <Filter>Классы\Интерфейсы</Filter>
+    </ClInclude>
+    <ClInclude Include="ICreateOrder.h">
+      <Filter>Классы\Интерфейсы</Filter>
+    </ClInclude>
+    <ClInclude Include="ISimulate.h">
+      <Filter>Классы\Интерфейсы</Filter>
     </ClInclude>
     <ClInclude Include="Manager.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Классы\Объекты симуляции\Менеджер склада</Filter>
     </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="Storage.h">
+      <Filter>Классы\Объекты симуляции\Склад</Filter>
+    </ClInclude>
+    <ClInclude Include="Order.h">
+      <Filter>Классы\Объекты симуляции\Заказ</Filter>
+    </ClInclude>
+    <ClInclude Include="Shop.h">
+      <Filter>Классы\Объекты симуляции\Магазин</Filter>
+    </ClInclude>
+    <ClInclude Include="Shelf.h">
+      <Filter>Классы\Объекты симуляции\Склад\Складская полка</Filter>
+    </ClInclude>
+    <ClInclude Include="Package.h">
+      <Filter>Классы\Объекты симуляции\Продукты\Оптовая упаковка</Filter>
+    </ClInclude>
+    <ClInclude Include="Product.h">
+      <Filter>Классы\Объекты симуляции\Продукты\Продукт</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

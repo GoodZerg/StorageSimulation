@@ -1,4 +1,4 @@
 class ICreateOrder {
 public:
-	virtual void CreateOrder() = 0;
+	virtual void CreateOrder(int, int) = 0;
 };

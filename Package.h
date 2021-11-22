@@ -3,12 +3,13 @@
 
 class Package : ISimulate {
 public:
-	Package();
-	void Update();
-	~Package() {
-		delete product_;
+	Package(Product product) : product_(product) {}
+
+	void Update() {
+		product_.Update();
 	}
 
-private:
-	Product* product_;
+	~Package() = default;
+
+	Product product_;
 };

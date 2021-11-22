@@ -1,4 +1,6 @@
+#include "Order.h"
+
 class ICompleteOrder {
 public:
-	virtual void CompleteOrder() = 0;
+	virtual void CompleteOrder(Order*) = 0;
 };

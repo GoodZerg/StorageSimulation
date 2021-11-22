@@ -3,14 +3,15 @@
 
 class Shelf : public ISimulate {
 public:
-	Shelf();
+	Shelf(int maxSize) : maxSize_(maxSize), packages_() {}
 	void Update();
-	bool isFull();
+	bool isFull() const;
 	void PutPackage(Package*);
 	Package* TakePackage();
+	int GetPackagesCount() const;
 	~Shelf() = default;
 
 private:
-	priority_queue<Package*> content_;
+	priority_queue<Package*> packages_;
 	int maxSize_;
 };
