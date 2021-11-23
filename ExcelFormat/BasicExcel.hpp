@@ -94,7 +94,7 @@
 #define COMPOUNDFILE CompoundFile::
 
 #ifdef _DEBUG
-#define _ITERATOR_DEBUG_LEVEL 0	// speedup iterator operations while debugging
+#define _ITERATOR_DEBUG_LEVEL 2	// speedup iterator operations while debugging
 #endif
 #endif
 
