@@ -139,7 +139,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <ClCompile Include="Main.cpp" />
+=======
+    <ClCompile Include="Factory.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="Product.cpp" />
+    <ClCompile Include="Shelf.cpp" />
+    <ClCompile Include="Shop.cpp" />
+    <ClCompile Include="Storage.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Factory.h" />
+    <ClInclude Include="ICompleteOrder.h" />
+    <ClInclude Include="ICreateOrder.h" />
+    <ClInclude Include="ISimulate.h" />
+    <ClInclude Include="Manager.h" />
+    <ClInclude Include="Order.h" />
+    <ClInclude Include="Package.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Product.h" />
+    <ClInclude Include="Shelf.h" />
+    <ClInclude Include="Shop.h" />
+    <ClInclude Include="Storage.h" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

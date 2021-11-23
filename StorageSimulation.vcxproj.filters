@@ -18,5 +18,58 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< Updated upstream
+=======
+    <ClCompile Include="Product.cpp">
+      <Filter>Классы\Объекты симуляции\Продукты\Продукт</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory.cpp">
+      <Filter>Классы\Объекты симуляции\Фабрика товаров</Filter>
+    </ClCompile>
+    <ClCompile Include="Storage.cpp">
+      <Filter>Классы\Объекты симуляции\Склад</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager.cpp">
+      <Filter>Классы\Объекты симуляции\Менеджер склада</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Классы</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory.h">
+      <Filter>Классы\Объекты симуляции\Фабрика товаров</Filter>
+    </ClInclude>
+    <ClInclude Include="ICompleteOrder.h">
+      <Filter>Классы\Интерфейсы</Filter>
+    </ClInclude>
+    <ClInclude Include="ICreateOrder.h">
+      <Filter>Классы\Интерфейсы</Filter>
+    </ClInclude>
+    <ClInclude Include="ISimulate.h">
+      <Filter>Классы\Интерфейсы</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager.h">
+      <Filter>Классы\Объекты симуляции\Менеджер склада</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage.h">
+      <Filter>Классы\Объекты симуляции\Склад</Filter>
+    </ClInclude>
+    <ClInclude Include="Order.h">
+      <Filter>Классы\Объекты симуляции\Заказ</Filter>
+    </ClInclude>
+    <ClInclude Include="Shop.h">
+      <Filter>Классы\Объекты симуляции\Магазин</Filter>
+    </ClInclude>
+    <ClInclude Include="Shelf.h">
+      <Filter>Классы\Объекты симуляции\Склад\Складская полка</Filter>
+    </ClInclude>
+    <ClInclude Include="Package.h">
+      <Filter>Классы\Объекты симуляции\Продукты\Оптовая упаковка</Filter>
+    </ClInclude>
+    <ClInclude Include="Product.h">
+      <Filter>Классы\Объекты симуляции\Продукты\Продукт</Filter>
+    </ClInclude>
+>>>>>>> Stashed changes
   </ItemGroup>
 </Project>
