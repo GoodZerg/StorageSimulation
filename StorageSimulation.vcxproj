@@ -139,11 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <ClCompile Include="Main.cpp" />
-=======
     <ClCompile Include="Factory.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="Shelf.cpp" />
@@ -163,7 +160,6 @@
     <ClInclude Include="Shelf.h" />
     <ClInclude Include="Shop.h" />
     <ClInclude Include="Storage.h" />
->>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
