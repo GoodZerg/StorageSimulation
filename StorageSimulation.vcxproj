@@ -139,6 +139,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ExcelFormat\BasicExcel.cpp" />
+    <ClCompile Include="ExcelFormat\ExcelFormat.cpp" />
+    <ClCompile Include="ExcelWriter.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Factory.cpp" />
     <ClCompile Include="Manager.cpp" />
@@ -148,6 +151,9 @@
     <ClCompile Include="Storage.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ExcelEditor.h" />
+    <ClInclude Include="ExcelFormat\BasicExcel.hpp" />
+    <ClInclude Include="ExcelFormat\ExcelFormat.h" />
     <ClInclude Include="Factory.h" />
     <ClInclude Include="ICompleteOrder.h" />
     <ClInclude Include="ICreateOrder.h" />

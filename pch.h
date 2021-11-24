@@ -6,6 +6,10 @@
 #include <map>
 #include <vector>
 #include <random>
+#include "ExcelFormat/ExcelFormat.h"
+#include "ExcelEditor.h"
+
+using namespace ExcelFormat;
 
 using std::cin;
 using std::cout;
@@ -19,5 +23,6 @@ using std::pair;
 
 static mt19937 Mt_rnd;
 
-
 static vector<string> currentSimulationProducts;
+
+static ExcelEditor* output;

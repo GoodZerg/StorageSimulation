@@ -1,65 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-<<<<<<< Updated upstream
-=======
-    <ClCompile Include="Product.cpp">
-      <Filter>Классы\Объекты симуляции\Продукты\Продукт</Filter>
-    </ClCompile>
     <ClCompile Include="Factory.cpp">
       <Filter>Классы\Объекты симуляции\Фабрика товаров</Filter>
     </ClCompile>
     <ClCompile Include="Storage.cpp">
       <Filter>Классы\Объекты симуляции\Склад</Filter>
     </ClCompile>
+    <ClCompile Include="Shelf.cpp">
+      <Filter>Классы\Объекты симуляции\Склад\Складская полка</Filter>
+    </ClCompile>
+    <ClCompile Include="Product.cpp">
+      <Filter>Классы\Объекты симуляции\Продукты\Продукт</Filter>
+    </ClCompile>
     <ClCompile Include="Manager.cpp">
       <Filter>Классы\Объекты симуляции\Менеджер склада</Filter>
     </ClCompile>
+    <ClCompile Include="Shop.cpp">
+      <Filter>Классы\Объекты симуляции\Магазин</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Симуляция</Filter>
+    </ClCompile>
+    <ClCompile Include="ExcelWriter.cpp">
+      <Filter>Классы\Системные\Ввод в xls файл</Filter>
+    </ClCompile>
+    <ClCompile Include="ExcelFormat\BasicExcel.cpp">
+      <Filter>Классы\Системные\Ввод в xls файл</Filter>
+    </ClCompile>
+    <ClCompile Include="ExcelFormat\ExcelFormat.cpp">
+      <Filter>Классы\Системные\Ввод в xls файл</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h">
-      <Filter>Классы</Filter>
-    </ClInclude>
-    <ClInclude Include="Factory.h">
-      <Filter>Классы\Объекты симуляции\Фабрика товаров</Filter>
-    </ClInclude>
-    <ClInclude Include="ICompleteOrder.h">
+    <ClInclude Include="ISimulate.h">
       <Filter>Классы\Интерфейсы</Filter>
     </ClInclude>
     <ClInclude Include="ICreateOrder.h">
       <Filter>Классы\Интерфейсы</Filter>
     </ClInclude>
-    <ClInclude Include="ISimulate.h">
+    <ClInclude Include="ICompleteOrder.h">
       <Filter>Классы\Интерфейсы</Filter>
     </ClInclude>
-    <ClInclude Include="Manager.h">
-      <Filter>Классы\Объекты симуляции\Менеджер склада</Filter>
+    <ClInclude Include="Factory.h">
+      <Filter>Классы\Объекты симуляции\Фабрика товаров</Filter>
     </ClInclude>
     <ClInclude Include="Storage.h">
       <Filter>Классы\Объекты симуляции\Склад</Filter>
-    </ClInclude>
-    <ClInclude Include="Order.h">
-      <Filter>Классы\Объекты симуляции\Заказ</Filter>
-    </ClInclude>
-    <ClInclude Include="Shop.h">
-      <Filter>Классы\Объекты симуляции\Магазин</Filter>
     </ClInclude>
     <ClInclude Include="Shelf.h">
       <Filter>Классы\Объекты симуляции\Склад\Складская полка</Filter>
@@ -70,6 +57,73 @@
     <ClInclude Include="Product.h">
       <Filter>Классы\Объекты симуляции\Продукты\Продукт</Filter>
     </ClInclude>
->>>>>>> Stashed changes
+    <ClInclude Include="Manager.h">
+      <Filter>Классы\Объекты симуляции\Менеджер склада</Filter>
+    </ClInclude>
+    <ClInclude Include="Shop.h">
+      <Filter>Классы\Объекты симуляции\Магазин</Filter>
+    </ClInclude>
+    <ClInclude Include="Order.h">
+      <Filter>Классы\Объекты симуляции\Заказ</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Симуляция</Filter>
+    </ClInclude>
+    <ClInclude Include="ExcelEditor.h">
+      <Filter>Классы\Системные\Ввод в xls файл</Filter>
+    </ClInclude>
+    <ClInclude Include="ExcelFormat\BasicExcel.hpp">
+      <Filter>Классы\Системные\Ввод в xls файл</Filter>
+    </ClInclude>
+    <ClInclude Include="ExcelFormat\ExcelFormat.h">
+      <Filter>Классы\Системные\Ввод в xls файл</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Классы">
+      <UniqueIdentifier>{8848c374-04f5-4ab7-8087-f6cc83d7eaa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Интерфейсы">
+      <UniqueIdentifier>{7b0ac406-a1d3-4c06-8d17-baa56ea623f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции">
+      <UniqueIdentifier>{c444ae42-1202-4f83-a8e0-0a0d782d1484}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Фабрика товаров">
+      <UniqueIdentifier>{00050673-0f4b-4c17-ba6a-6a005628fb8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Склад">
+      <UniqueIdentifier>{bdd0eb3a-56c0-4729-9ced-5496d2facc11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Склад\Складская полка">
+      <UniqueIdentifier>{fe29e6be-6a2e-4207-bb97-f4f0ae7866ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Продукты">
+      <UniqueIdentifier>{199c8457-b163-477d-aaa7-b27ba259ce56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Продукты\Оптовая упаковка">
+      <UniqueIdentifier>{dadbf569-a1b9-4a50-a6a5-be50c89bd557}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Продукты\Продукт">
+      <UniqueIdentifier>{e209f1f5-0612-466f-aacd-4ff2f4dcc587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Менеджер склада">
+      <UniqueIdentifier>{9a2841d9-2a14-4dd4-a671-4edc2059e105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Магазин">
+      <UniqueIdentifier>{7fbcd88d-0301-4468-ba9f-e920d4661a8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Объекты симуляции\Заказ">
+      <UniqueIdentifier>{d50ee02b-11cd-4e05-90dc-59c499e00122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Симуляция">
+      <UniqueIdentifier>{588d0fb3-b0f6-4500-bcc1-b387ca216643}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Системные">
+      <UniqueIdentifier>{69c4f2f1-f922-4936-9274-a65e1609e309}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Классы\Системные\Ввод в xls файл">
+      <UniqueIdentifier>{44044d7b-5a05-431f-bbb4-27942b0bf4ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
