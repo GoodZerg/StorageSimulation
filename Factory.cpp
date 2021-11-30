@@ -11,10 +11,10 @@ void Factory::Update() {
 	}
 	orders_[5].clear();
 	for (Order* i : orders_[0]) {
-
+		CompleteOrder(i);
 	}
 }
 
 void Factory::CompleteOrder(Order* order) {
-
+	dynamic_cast<ITakePackages*>(order->customer_)->TakePackages(order);
 }

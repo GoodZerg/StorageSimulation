@@ -23,6 +23,7 @@ using std::pair;
 
 static mt19937 Mt_rnd;
 
+
 static vector<string> currentSimulationProducts;
 
 static ExcelEditor* output;

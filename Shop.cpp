@@ -8,6 +8,10 @@ void Shop::Update() {
 	CreateOrder(productType, packageCount);
 }
 
+void Shop::TakePackages(Order* order) {
+	delete order;
+}
+
 void Shop::CreateOrder(int productType, int packageCount) {
 	Order* order = new Order();
 	order->customer_ = this;

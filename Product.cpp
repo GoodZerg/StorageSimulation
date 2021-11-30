@@ -11,3 +11,7 @@ bool Product::isFresh() {
 bool Product::isRotting() {
 	return age_ <= markdownTime_;
 }
+
+string Product::GetProductName() const {
+	return name_;
+}

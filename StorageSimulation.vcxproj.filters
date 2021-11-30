@@ -78,6 +78,9 @@
     <ClInclude Include="ExcelFormat\ExcelFormat.h">
       <Filter>Классы\Системные\Ввод в xls файл</Filter>
     </ClInclude>
+    <ClInclude Include="ITakePackages.h">
+      <Filter>Классы\Интерфейсы</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Классы">

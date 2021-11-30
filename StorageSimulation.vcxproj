@@ -158,6 +158,7 @@
     <ClInclude Include="ICompleteOrder.h" />
     <ClInclude Include="ICreateOrder.h" />
     <ClInclude Include="ISimulate.h" />
+    <ClInclude Include="ITakePackages.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="Order.h" />
     <ClInclude Include="Package.h" />

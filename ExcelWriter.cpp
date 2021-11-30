@@ -5,7 +5,8 @@ ExcelEditor::ExcelEditor(string fileName, int dayCount) : dayCounter_(0), fileNa
 	document_ = BasicExcel(fileName_.c_str());
 	document_.New(dayCount);
 	for (int i = 0; i < dayCount; ++i) {
-		document_.RenameWorksheet(i, L"Δενό" + (i + 1));
+		std::wstring tmp(L"Δενό " + std::to_wstring(i + 1));
+		document_.RenameWorksheet(i, tmp.c_str());
 	}
 }
 
