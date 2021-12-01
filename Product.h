@@ -11,9 +11,11 @@ public:
 		countInPackage_(countInPackage), lifeTime_(lifetime), markdownTime_(markdownTime) {}
 	void Update();
 	~Product() = default;
-	bool isFresh();
-	bool isRotting();
+	bool isFresh() const;
+	bool isRotting() const;
 	string GetProductName() const;
+	double GetProductPrice() const;
+	size_t GetAge() const;
 private:
 	string name_ = 0;
 	double weight_ = 0, price_ = 0, markdownPrice_ = 0;
@@ -22,8 +24,14 @@ private:
 };
 
 static map<string, Product> ProductsClass = {
-	{"Говно", Product("Говно", 1.2, 10, 8, 10, 4, 2) },
-	{"Моча",  Product("Моча", 1.2, 10, 8, 10, 4, 2) }
+	{"1", Product("1", 1.2, 10, 8, 10, 4, 2) },
+	{"2",  Product("2", 1.2, 10, 8, 10, 4, 2) },
+	{"3",  Product("3", 1.2, 10, 8, 10, 4, 2) },
+	{"4",  Product("4", 1.2, 10, 8, 10, 4, 2) },
+	{"5",  Product("5", 1.2, 10, 8, 10, 4, 2) },
+	{"6",  Product("6", 1.2, 10, 8, 10, 4, 2) },
+	{"7",  Product("7", 1.2, 10, 8, 10, 4, 2) },
+	{"8",  Product("8", 1.2, 10, 8, 10, 4, 2) }
 };
 
 

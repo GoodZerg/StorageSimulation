@@ -10,9 +10,15 @@ public:
 	void PutPackage(Package*);
 	Package* TakePackage();
 	int GetPackagesCount() const;
+	int GetMaxSize() const;
 	~Shelf() = default;
 
 private:
-	priority_queue<Package*> packages_;
+	struct comp {
+		bool operator()(Package* left, Package* right) {
+			return left->product_.GetAge() < right->product_.GetAge();
+		}
+	};
+	priority_queue < Package*, vector<Package*>, comp > packages_;
 	int maxSize_;
 };

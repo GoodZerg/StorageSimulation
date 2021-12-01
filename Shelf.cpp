@@ -2,7 +2,7 @@
 
 void Shelf::Update() {
 	Package* temp;
-	priority_queue<Package*> newPackages;
+	priority_queue<Package*, vector<Package*>, comp > newPackages;
 	while (true) {
 		temp = TakePackage();
 		if (temp == nullptr)
@@ -17,7 +17,7 @@ void Shelf::Update() {
 }
 
 bool Shelf::isFull() const {
-	return packages_.size() < maxSize_;
+	return packages_.size() >= maxSize_;
 }
 
 void Shelf::PutPackage(Package* newPackage) {
@@ -35,4 +35,8 @@ Package* Shelf::TakePackage() {
 
 int Shelf::GetPackagesCount() const {
 	return packages_.size();
+}
+
+int Shelf::GetMaxSize() const {
+	return maxSize_;
 }

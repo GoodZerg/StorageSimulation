@@ -24,6 +24,10 @@ using std::pair;
 static mt19937 Mt_rnd;
 
 
-static vector<string> currentSimulationProducts;
+static vector<string> currentSimulationProducts = {
+"1", "2", "3",
+"4", "5", "6",
+"7", "8"
+};
 
-static ExcelEditor* output;
+

@@ -157,6 +157,7 @@
     <ClInclude Include="Factory.h" />
     <ClInclude Include="ICompleteOrder.h" />
     <ClInclude Include="ICreateOrder.h" />
+    <ClInclude Include="IMoneyCount.h" />
     <ClInclude Include="ISimulate.h" />
     <ClInclude Include="ITakePackages.h" />
     <ClInclude Include="Manager.h" />

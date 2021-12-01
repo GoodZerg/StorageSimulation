@@ -19,4 +19,5 @@ void Shop::CreateOrder(int productType, int packageCount) {
 	order->productType = currentSimulationProducts[productType];
 	order->packageCount = packageCount;
 	storage_->TakeOrder(order);
+	std::cout << "\n shop - " << currentSimulationProducts[productType] << ": " << packageCount <<"\n";
 }

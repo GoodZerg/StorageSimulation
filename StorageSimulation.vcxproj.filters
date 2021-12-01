@@ -81,6 +81,9 @@
     <ClInclude Include="ITakePackages.h">
       <Filter>Классы\Интерфейсы</Filter>
     </ClInclude>
+    <ClInclude Include="IMoneyCount.h">
+      <Filter>Классы\Интерфейсы</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Классы">

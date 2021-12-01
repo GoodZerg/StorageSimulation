@@ -1,13 +1,16 @@
 #pragma once
 
 #include "Storage.h"
+#include "IMoneyCount.h"
 
-class Manager : public ISimulate {
+class Manager : public ISimulate, public IMoneyCount {
 public:
 	Manager();
 	void SetStorage(Storage* storage);
 	void Update();
+	void AddMoney(Product*);
+	void TakeMoney(Product*);
 private:
 	Storage* storage_ = nullptr;
-	int money = 0;
+	map<string, int> money;
 };

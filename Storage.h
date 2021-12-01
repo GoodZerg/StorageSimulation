@@ -6,6 +6,7 @@
 #include "Order.h"
 #include "Factory.h"
 #include "ITakePackages.h"
+#include "IMoneyCount.h"
 
 class Storage : public ISimulate, public ICreateOrder, public ICompleteOrder, public ITakePackages {
 public:
@@ -20,6 +21,7 @@ private:
 	void CompleteOrder(Order*);
 	map<string, Shelf*> shelfs_;
 	map<string, vector<Order*>> orders_;
+	vector<Order*> sendProduct_;
 	ISimulate* manager_;
 	Factory* factory_;
 };
