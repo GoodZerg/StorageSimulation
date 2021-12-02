@@ -6,6 +6,7 @@
 #include <map>
 #include <vector>
 #include <random>
+#include <set>
 #include "ExcelFormat/ExcelFormat.h"
 #include "ExcelEditor.h"
 
@@ -20,9 +21,6 @@ using std::vector;
 using std::mt19937;
 using std::uniform_int_distribution;
 using std::pair;
-
-static mt19937 Mt_rnd;
-
 
 static vector<string> currentSimulationProducts = {
 "1", "2", "3",

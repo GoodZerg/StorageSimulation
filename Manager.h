@@ -10,6 +10,7 @@ public:
 	void Update();
 	void AddMoney(Product*);
 	void TakeMoney(Product*);
+	void PrintMoney();
 private:
 	Storage* storage_ = nullptr;
 	map<string, int> money;

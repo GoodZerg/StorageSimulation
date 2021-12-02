@@ -11,6 +11,7 @@ public:
 	void AddOrder(Order*);
 
 private:
+	mt19937 Mt_rndd;
 	void CompleteOrder(Order*);
 	vector<vector<Order*>> orders_;
 	uniform_int_distribution<> randDayCount_;

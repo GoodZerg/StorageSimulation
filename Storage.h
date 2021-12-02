@@ -7,11 +7,12 @@
 #include "Factory.h"
 #include "ITakePackages.h"
 #include "IMoneyCount.h"
+#include "ExcelEditor.h"
 
 class Storage : public ISimulate, public ICreateOrder, public ICompleteOrder, public ITakePackages {
 public:
 	friend class Manager;
-	Storage(int productNum, int shelfMaxSize, Factory* fa, ISimulate* manager);
+	Storage(int productNum, int shelfMaxSize, int daysCount, string fileName, Factory* fa, ISimulate* manager);
 	~Storage();
 	void Update();
 	void TakeOrder(Order*);
@@ -24,4 +25,6 @@ private:
 	vector<Order*> sendProduct_;
 	ISimulate* manager_;
 	Factory* factory_;
+	ExcelEditor* excelEditor_;
+	std::set<string> waitingFromFactory_;
 };

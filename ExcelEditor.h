@@ -7,6 +7,7 @@ public:
 	ExcelEditor(string, int);
 	void NextDay();
 	void NextRaw();
+	void StepToRaw(int raw);
 	void WriteData(int, vector<double>&);
 	void WriteText(int, wstring);
 	void EndEditing();

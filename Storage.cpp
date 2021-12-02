@@ -1,47 +1,88 @@
 #include "Storage.h"
 
-Storage::Storage(int productNum, int shelfMaxSize, Factory* fa, ISimulate* manager) {
+Storage::Storage(int productNum, int shelfMaxSize, int daysCount, string fileName, Factory* fa, ISimulate* manager) {
 	for (auto i : ProductsClass) {
 		shelfs_[i.first] = new Shelf(shelfMaxSize);
 		for (; !shelfs_[i.first]->isFull();) {
 			shelfs_[i.first]->PutPackage(new Package(i.second));
 		}
-		orders_[i.first] = vector<Order*>();
 	}
 
-	for (auto i : shelfs_) {
-		std::cout << i.first << ": " << i.second->GetPackagesCount() << "\n";
-	}
-	std::cout << "\n";
-	std::cout << "\n";
-	std::cout << "\n";
+	excelEditor_ = new ExcelEditor(fileName, daysCount);
+	//excelEditor_->WriteText(0, L"Я пидорас!");
+	// for (auto i : shelfs_) {
+	// 	std::cout << i.first << ": " << i.second->GetPackagesCount() << "\n";
+	// }
+	// std::cout << "\n";
+	// std::cout << "\n";
+	// std::cout << "\n";
 
 	manager_ = manager;
 	factory_ = fa;
 }
 
 Storage::~Storage() {
+
+	excelEditor_->EndEditing();
+	delete excelEditor_;
+
 	shelfs_.clear();
 	orders_.clear();
 }
 
 void Storage::Update() {
+	excelEditor_->NextDay();
+	excelEditor_->NextRaw();
+	excelEditor_->WriteText(1, L"Состояние склада на начало дня");
+	excelEditor_->NextRaw();
+	excelEditor_->WriteText(1, L"Тип товара на полке");
+	excelEditor_->WriteText(2, L"Количество");
+	excelEditor_->NextRaw();
+
+	for (auto i : shelfs_) {
+		excelEditor_->WriteText(1, wstring(i.first.begin(), i.first.end()));
+		//std::cout << i.first << ": " << i.second->GetPackagesCount() << "\n";
+		excelEditor_->WriteText(2, std::to_wstring(i.second->GetPackagesCount()));
+		excelEditor_->NextRaw();
+	}
+
+	excelEditor_->NextRaw();
+	excelEditor_->NextRaw();
+
+	excelEditor_->WriteText(1, L"Заказы на сегодня(до обработки менеджером)");
+	excelEditor_->NextRaw();
+	excelEditor_->WriteText(1, L"Тип товара");
+	excelEditor_->WriteText(2, L"Количество");
+	excelEditor_->NextRaw();
+
+	for (auto i : orders_) {
+		excelEditor_->WriteText(1, wstring(i.first.begin(), i.first.end()));
+		vector<double> tmp = {};
+		for (auto j : i.second) {
+			tmp.push_back(static_cast<double>(j->packageCount));
+		}
+		excelEditor_->WriteData(2, tmp);
+		excelEditor_->NextRaw();
+	}
+
+	excelEditor_->NextRaw();
+	excelEditor_->NextRaw();
 
 	for (auto i : shelfs_) {
 		std::cout << i.first << ": " << i.second->GetPackagesCount() << "\n";
 	}
 	std::cout << "\n";
 
-
 	for (auto i: shelfs_) {
 		i.second->Update();
 	}
+
 	manager_->Update();
+
 	for (auto i : sendProduct_) {
 		CompleteOrder(i);
 	}
 	sendProduct_.clear();
-
 
 
 	for (auto i : orders_) {
@@ -57,7 +98,7 @@ void Storage::TakeOrder(Order* order) {
 void Storage::TakePackages(Order* order) {
 	for (int i = 0; i < order->packageCount; ++i) {
 		auto pack = new Package(ProductsClass[order->productType]);
-		dynamic_cast<IMoneyCount*>(manager_)->TakeMoney(&pack->product_);
+		waitingFromFactory_.erase(order->productType);
 		shelfs_[order->productType]->PutPackage(pack);
 	}
 	delete order;

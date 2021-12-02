@@ -1,7 +1,7 @@
 #include "Factory.h"
 
 void Factory::AddOrder(Order* order) {
-	int completionPeriod = randDayCount_(Mt_rnd);
+	int completionPeriod = randDayCount_(Mt_rndd);
 	orders_[completionPeriod].push_back(order);
 }
 

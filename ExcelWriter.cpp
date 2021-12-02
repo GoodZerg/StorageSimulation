@@ -20,6 +20,10 @@ void ExcelEditor::NextRaw() {
 	++rawCounter_;
 }
 
+void ExcelEditor::StepToRaw(int raw) {
+	rawCounter_ = raw;
+}
+
 void ExcelEditor::WriteText(int column, wstring text) {
 	BasicExcelCell* cell = currentDay_->Cell(rawCounter_, column);
 	cell->SetWString(text.c_str());
