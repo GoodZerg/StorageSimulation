@@ -3,6 +3,8 @@
 #include "Order.h"
 #include "ISimulate.h"
 #include "ITakePackages.h"
+	
+static mt19937 Mt_rndd = mt19937(time(NULL));
 
 class Factory : public ISimulate, public ICompleteOrder {
 public:
@@ -11,7 +13,6 @@ public:
 	void AddOrder(Order*);
 
 private:
-	mt19937 Mt_rndd;
 	void CompleteOrder(Order*);
 	vector<vector<Order*>> orders_;
 	uniform_int_distribution<> randDayCount_;

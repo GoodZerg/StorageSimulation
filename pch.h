@@ -9,6 +9,7 @@
 #include <set>
 #include "ExcelFormat/ExcelFormat.h"
 #include "ExcelEditor.h"
+#include <ctime>
 
 using namespace ExcelFormat;
 
